@@ -1,0 +1,233 @@
+-------------------------
+Copy Matrix
+-------------------------
+06-01-2022 15:27:31
+-----------------------------------------
+           Copy Matrix:  5000 
+-----------------------------------------
+Unit: milliseconds
+          expr       min        lq     mean    median       uq       max neval
+          Loop 6021.1851 6147.5114 6216.019 6273.8376 6313.436 6353.0347     3
+ Vectorization  900.7421  914.3151  925.970  927.8881  938.584  949.2799     3
+-----------------------------------------
+           Copy Matrix:  7000 
+-----------------------------------------
+Unit: seconds
+          expr       min        lq      mean   median       uq      max neval
+          Loop 14.101136 14.104711 14.122127 14.10829 14.13262 14.15696     3
+ Vectorization  2.004013  2.038506  9.336177  2.07300 13.00226 23.93152     3
+-----------------------------------------
+           Copy Matrix:  9000 
+-----------------------------------------
+jobscript.R: line 8: 56234 Killed                  Rscript test_copy_matrix.R 9000
+-------------------------
+Count Unique Words
+-------------------------
+06-01-2022 15:30:30
+-----------------------------------------
+      Count the number of unique words in:  bible.txt 
+-----------------------------------------
+Unit: seconds
+        expr      min       lq     mean   median       uq      max neval
+ Count Words 9.760825 9.840752 9.994491 9.920679 10.11132 10.30197     3
+-----------------------------------------
+      Count the number of unique words in:  book1.txt 
+-----------------------------------------
+Unit: seconds
+        expr      min       lq     mean   median       uq      max neval
+ Count Words 5.271023 5.286433 5.318203 5.301843 5.341793 5.381744     3
+Warning messages:
+1: In readLines(file.id) : line 9186 appears to contain an embedded nul
+2: In readLines(file.id) : line 9186 appears to contain an embedded nul
+3: In readLines(file.id) : line 9186 appears to contain an embedded nul
+-----------------------------------------
+      Count the number of unique words in:  plrabn12.txt 
+-----------------------------------------
+Unit: seconds
+        expr     min       lq     mean   median      uq      max neval
+ Count Words 2.73009 2.732853 2.756437 2.735617 2.76961 2.803604     3
+-----------------------------------------
+      Count the number of unique words in:  world192.txt 
+-----------------------------------------
+Unit: seconds
+        expr      min       lq     mean   median       uq      max neval
+ Count Words 31.90822 31.95214 32.01742 31.99605 32.07202 32.14799     3
+-------------------------
+Fibonacci Sequence
+-------------------------
+06-01-2022 15:33:28
+-----------------------------------------
+           Fibonacci:  25 
+-----------------------------------------
+Unit: microseconds
+      expr     min       lq     mean  median        uq      max neval
+ Iterative  10.957  33.5185 1969.456  56.080  2948.705  5841.33     3
+ Recursive 130.089 232.5955 7188.875 335.102 10718.269 21101.44     3
+-----------------------------------------
+           Fibonacci:  35 
+-----------------------------------------
+Unit: microseconds
+      expr     min      lq     mean  median        uq      max neval
+ Iterative  13.397  39.161 2063.701  64.925  3088.852  6112.78     3
+ Recursive 170.551 361.782 7247.796 553.013 10786.419 21019.83     3
+-----------------------------------------
+           Fibonacci:  45 
+-----------------------------------------
+Unit: microseconds
+      expr     min       lq     mean  median        uq       max neval
+ Iterative  15.941  45.1015 1898.401  74.262  2839.631  5605.001     3
+ Recursive 287.127 482.9130 6859.369 678.699 10145.489 19612.280     3
+-------------------------
+Matrix Multiplication
+-------------------------
+06-01-2022 15:33:29
+---------------------------------------
+     Multiplication of matrices:  1500 
+---------------------------------------
+Unit: seconds
+    expr      min       lq     mean  median       uq      max neval
+ MatMult 2.773223 2.775322 2.789468 2.77742 2.797591 2.817761     3
+---------------------------------------
+     Multiplication of matrices:  1750 
+---------------------------------------
+Unit: seconds
+    expr      min       lq     mean   median       uq      max neval
+ MatMult 4.433205 4.439371 4.447787 4.445538 4.455078 4.464618     3
+---------------------------------------
+     Multiplication of matrices:  2000 
+---------------------------------------
+Unit: seconds
+    expr      min       lq     mean   median      uq      max neval
+ MatMult 6.654667 6.664261 6.670582 6.673854 6.67854 6.683225     3
+-------------------------
+Belief Propagation
+-------------------------
+06-01-2022 15:34:12
+---------------------------------------
+     Belief Calculations:  250 
+---------------------------------------
+Unit: seconds
+   expr      min       lq     mean  median       uq      max neval
+ Belief 10.53865 10.58637 10.67943 10.6341 10.74981 10.86553     3
+---------------------------------------
+     Belief Calculations:  500 
+---------------------------------------
+Unit: seconds
+   expr      min       lq     mean   median       uq     max neval
+ Belief 20.25155 20.25618 20.28242 20.26081 20.29785 20.3349     3
+---------------------------------------
+     Belief Calculations:  1000 
+---------------------------------------
+Unit: seconds
+   expr      min       lq     mean   median       uq      max neval
+ Belief 39.48441 39.49511 39.51619 39.50582 39.53208 39.55835     3
+-------------------------
+Markov Chain
+-------------------------
+06-01-2022 15:37:45
+---------------------------------------
+     Markov Chain Calculations:  5000 
+---------------------------------------
+Unit: milliseconds
+         expr     min       lq     mean   median       uq      max neval
+ Markov Calcs 21.1459 26.71017 43.71851 32.27445 55.00481 77.73518     3
+---------------------------------------
+     Markov Chain Calculations:  10000 
+---------------------------------------
+Unit: milliseconds
+         expr      min      lq     mean   median       uq      max neval
+ Markov Calcs 44.44349 48.1599 60.42886 51.87631 68.42154 84.96677     3
+---------------------------------------
+     Markov Chain Calculations:  15000 
+---------------------------------------
+Unit: milliseconds
+         expr      min       lq     mean   median       uq      max neval
+ Markov Calcs 68.39491 69.28269 82.40326 70.17046 89.40743 108.6444     3
+-------------------------
+FFT Calculations
+-------------------------
+06-01-2022 15:37:46
+-----------------------------------------
+           Compute FFT:  10000 
+-----------------------------------------
+jobscript.R: line 61: 56661 Killed                  Rscript test_compute_FFT.R 10000
+-----------------------------------------
+           Compute FFT:  15000 
+-----------------------------------------
+jobscript.R: line 62: 56692 Killed                  Rscript test_compute_FFT.R 15000
+-----------------------------------------
+           Compute FFT:  20000 
+-----------------------------------------
+jobscript.R: line 63: 56714 Killed                  Rscript test_compute_FFT.R 20000
+-------------------------
+Square root of Matrix
+-------------------------
+06-01-2022 15:41:11
+-----------------------------------------
+           Square root of matrix:  1000 
+-----------------------------------------
+Unit: seconds
+    expr      min      lq     mean   median       uq      max neval
+ sqrtMat 2.159391 2.16305 2.479027 2.166709 2.638846 3.110982     3
+-----------------------------------------
+           Square root of matrix:  2000 
+-----------------------------------------
+Unit: seconds
+    expr      min       lq     mean   median       uq      max neval
+ sqrtMat 17.92556 17.97231 17.99101 18.01905 18.02373 18.02841     3
+-----------------------------------------
+           Square root of matrix:  4000 
+-----------------------------------------
+Unit: seconds
+    expr      min       lq     mean   median       uq      max neval
+ sqrtMat 145.8084 146.4873 146.7729 147.1662 147.2551 147.3439     3
+-------------------------
+Gauss Legendre quadrature
+-------------------------
+06-01-2022 15:50:03
+---------------------------------------
+     Gauss Legendre Quadrature:  50 
+---------------------------------------
+Unit: microseconds
+       expr     min       lq     mean  median       uq      max neval
+ Quadrature 770.391 9927.647 16275.63 19084.9 24028.25 28971.59     3
+---------------------------------------
+     Gauss Legendre Quadrature:  75 
+---------------------------------------
+Unit: milliseconds
+       expr      min       lq     mean   median       uq      max neval
+ Quadrature 1.171212 2.153417 6.703407 3.135623 9.469505 15.80339     3
+---------------------------------------
+     Gauss Legendre Quadrature:  100 
+---------------------------------------
+Unit: milliseconds
+       expr      min       lq     mean  median       uq      max neval
+ Quadrature 1.903793 3.016427 7.585791 4.12906 10.42679 16.72452     3
+-------------------------
+Function evaluation
+-------------------------
+06-01-2022 15:50:04
+-----------------------------------------
+           Evaluate Functions:  80000 
+-----------------------------------------
+Unit: seconds
+     expr      min       lq    mean   median       uq      max neval
+ Evaluate 65.53581 65.60257 65.7261 65.66933 65.82125 65.97317     3
+-----------------------------------------
+           Evaluate Functions:  90000 
+-----------------------------------------
+Unit: seconds
+     expr      min       lq    mean median       uq      max neval
+ Evaluate 75.12586 75.87443 76.3619 76.623 76.97992 77.33685     3
+-----------------------------------------
+           Evaluate Functions:  100000 
+-----------------------------------------
+Unit: seconds
+     expr      min       lq     mean   median       uq  max neval
+ Evaluate 81.78783 82.01662 83.07775 82.24541 83.72271 85.2     3
+-------------------------
+Pernicious numbers
+-------------------------
+06-01-2022 16:01:21
+Error in library(binaryLogic) : there is no package called ‘binaryLogic’
+Execution halted

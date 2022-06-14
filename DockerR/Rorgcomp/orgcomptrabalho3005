@@ -1,0 +1,7 @@
+fibonacci: média de cada caso(25, 35, 45)
+           só sera comparado com as outras linguagens o 45
+
+salvar em csv os resultados dos testes (csv para R, julia e python)
+fazer todos os testes
+
+documentar quais os testes dos 15, nas quatro áreas, deve ter pelo menos 1 teste de cada áreas

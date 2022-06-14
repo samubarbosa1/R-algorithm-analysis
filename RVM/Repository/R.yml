@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install necessary packages
+      apt:
+        name:
+          - dirmngr
+          - gnupg
+          - apt-transport-https
+          - ca-certificates
+          - software-properties-common
+          - build-essential
+        update_cache: yes
+    - name: add key
+      apt_key:
+        keyserver: keyserver.ubuntu.com
+        id: E298A3A825C0D65DFD57CBB651716619E084DAB9
+    #        state: present
+    - name: add repository
+      apt_repository:
+        repo: "deb https://cloud.r-project.org/bin/linux/ubuntu jammy-cran40/"
+    - name: install R
+      apt:
+        name: r-base=4.2*

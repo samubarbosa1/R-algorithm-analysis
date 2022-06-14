@@ -1,0 +1,1 @@
+Rscript test_pernicious_numbers.R 100000

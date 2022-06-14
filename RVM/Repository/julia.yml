@@ -1,0 +1,19 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Mudar arquivo
+      command: chdir=/opt/ ls
+    - name: Baixar arquivo e extrair
+      unarchive:
+        src: https://julialang-s3.julialang.org/bin/linux/x64/1.7/julia-1.7.2-linux-x86_64.tar.gz
+        dest: /opt/
+        remote_src: yes
+    - name: Define PATH
+      lineinfile:
+        dest: /etc/environment
+        state: present
+        backrefs: yes
+        regexp: 'PATH=(["]*)((?!.*?/opt/julia-1.7.2/bin).*?)(["]*)$'
+        line: 'PATH=\1\2:/opt/julia-1.7.2/bin\3'
+        
